@@ -1,0 +1,27 @@
+module leading_zeros {
+  yang-version 1.1;
+  prefix m1;
+  namespace "urn:leading_zeros";
+
+
+  leaf le1 {
+    type decimal64 {
+      fraction-digits 2;
+    }
+    default "02.01";
+  }
+
+  leaf le2 {
+    type int8 {
+      range "0 .. 10 | 020 .. 50";
+    }
+    default "007";
+  }
+
+  leaf le3 {
+    type string{
+      length "0 .. 05";
+    }
+    default "Tom";
+  }
+}

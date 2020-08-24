@@ -21,7 +21,7 @@ re_keyword_start = re.compile('^' + keyword)
 re_comment = re.compile(comment)
 
 pos_integer = r"[1-9][0-9]*"
-nonneg_integer = r"(0|([1-9][0-9]*))"
+nonneg_integer = r"\d+"
 integer_ = r"[+-]?" + nonneg_integer
 decimal_ = integer_ + r"(\.[0-9]+)?"
 length_str = r'((min|max|[0-9]+)\s*' \
